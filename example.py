@@ -14,6 +14,7 @@ with allure.step('获取回传本地事件列表数据'):
             res = Monitor.get_tracking_event(get_tracking_event_url)
             assert res['code'] == 0
             logger.info('获取落地页事件列表数据成功，取第一个事件作为测试数据入参')
+            name = IDD_TEST_CODE_SCAN
             temp_event_type = res['data'][0]['event_type']
 
         with allure.step('新建转化配置'):
